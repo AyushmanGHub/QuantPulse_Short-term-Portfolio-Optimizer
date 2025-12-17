@@ -92,9 +92,11 @@ Despite experimenting with multiple ideas, **only the following three optimisati
   Allocates risk hierarchically using correlation clustering, without relying on expected returns
 
 ### 📌 Portfolio Optimisation Methods Included
-<img src="resources/Eg1.1.png" alt="Alt Text" width="900" height ="350">
-<img src="resources/Eg1.2.png" alt="Alt Text" width="900" height ="350">
-<img src="resources/Eg1.3.png" alt="Alt Text" width="900" height ="350">
+<div style="display: flex; justify-content: space-between; gap: 10px;">
+  <img src="resources/Eg1.1.png" alt="Example 1.1" width="32%">
+  <img src="resources/Eg1.2.png" alt="Example 1.2" width="32%">
+  <img src="resources/Eg1.3.png" alt="Example 1.3" width="32%">
+</div>
 
 | Method             | Focus           | Key Strength                             |
 | ------------------ | --------------- | ---------------------------------------- |
