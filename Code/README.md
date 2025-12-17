@@ -4,6 +4,8 @@ This folder contains **all source code and experimental notebooks** developed fo
 
 The codebase is organised to reflect the **end-to-end workflow**, starting from data collection and preprocessing, through short-term price prediction, and finally to portfolio optimisation and evaluation.
 
+**Note:** Util and Data files are not included included here
+
 ### 📌 Folder Structure and Purpose
 
 The notebooks in this directory broadly follow the pipeline below:
