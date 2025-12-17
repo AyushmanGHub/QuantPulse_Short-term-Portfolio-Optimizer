@@ -66,6 +66,10 @@ The QuantPulse pipeline follows a structured workflow:
 * One-hour-ahead price forecasts
 * Predicted prices converted into expected short-term returns
 
+<img src="resources/ActVsPred.png" alt="Alt Text" width="900" height ="500">
+
+
+
 #### 3️⃣ Dynamic Risk and Return Estimation
 
 * Risk and covariance computed using:
@@ -88,6 +92,9 @@ Despite experimenting with multiple ideas, **only the following three optimisati
   Allocates risk hierarchically using correlation clustering, without relying on expected returns
 
 ### 📌 Portfolio Optimisation Methods Included
+<img src="resources/Eg1.1.png" alt="Alt Text" width="900" height ="350">
+<img src="resources/Eg1.2.png" alt="Alt Text" width="900" height ="350">
+<img src="resources/Eg1.3.png" alt="Alt Text" width="900" height ="350">
 
 | Method             | Focus           | Key Strength                             |
 | ------------------ | --------------- | ---------------------------------------- |
