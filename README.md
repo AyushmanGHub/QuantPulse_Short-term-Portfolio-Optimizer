@@ -2,10 +2,10 @@
 
 ### 📌 Abstract
 
-**QuantPulse** is an end-to-end framework for **short-term portfolio optimisation** that combines **machine-learning–based price prediction** with **dynamic, rolling portfolio construction**.
-Traditional portfolio optimisation methods rely on long-term historical averages for return and risk estimation, which fail to adapt to rapidly changing market conditions. QuantPulse addresses this limitation by **forecasting short-term future prices** and **recomputing risk–return statistics dynamically**, enabling more realistic and responsive portfolio decisions.
+In this project I developed an end-to-end framework for **short-term portfolio optimisation** that combines **machine-learning–based price prediction** for all assets with **dynamic, rolling portfolio construction**.
+Traditional portfolio optimisation methods rely on long-term historical averages for return and risk estimation, which fail to adapt to rapidly changing market conditions. Through this project, I aim addresses this limitation by **forecasting short-term future prices** and **recomputing risk–return statistics dynamically**, enabling more realistic and responsive portfolio decisions.
 
-Although several optimisation ideas were explored during development, **this repository and the accompanying report/presentation include only three portfolio optimisation techniques**:
+Although, I explored several optimisation ideas during development, **this repository and the accompanying report/presentation include only three portfolio optimisation techniques**:
 
 * **Efficient Frontier (Mean–Variance Optimisation)**
 * **Bayesian Portfolio Optimisation**
@@ -20,29 +20,26 @@ These methods were selected to represent **return-focused**, **balanced**, and *
 
 Short-term portfolio optimisation faces key limitations in traditional approaches:
 
-* **Static return estimates**
-  Expected returns are usually computed as long-term historical averages, which do not reflect current market regimes.
+* **Static return estimates** - Expected returns are usually computed as long-term historical averages, which do not reflect current market regimes.
 
-* **Static risk assumptions**
-  Volatility and correlations change rapidly due to news, liquidity shifts, and macro events.
+* **Static risk assumptions** - Volatility and correlations change rapidly due to news, liquidity shifts, and macro events.
 
-* **Lack of short-term risk-conditioned targets**
-  Classical portfolio theory is designed for long-term investing and does not define how much return to target under short-term risk constraints.
+* **Lack of short-term risk-conditioned targets** - Classical portfolio theory is designed for long-term investing and does not define how much return to target under short-term risk constraints.
 
 These issues cause conventional models to underperform in intraday and short-horizon trading.
 
-**The QuantPulse Solution:**
+**The QuantPulse Solution(my solution):**
 
 QuantPulse introduces a **prediction-driven, rolling optimisation framework** that:
 
-* Uses **model-predicted future prices** instead of historical averages
+* Uses **model-predicted future prices** instead of historical averages for each asset
 * Computes **risk and return dynamically** using recent data windows or decay weighting
 * Continuously **updates portfolio weights** to reflect real-time market behaviour
 
 
 ### 📌 Introduction
 
-This repository implements a **two-stage short-term portfolio optimisation pipeline** for Indian stocks and indices using **hourly market data**:
+The whole project is implemented in a **two-stage short-term portfolio optimisation pipeline** for Indian stocks and indices using **hourly market data**:
 
 1. **Rolling short-term price prediction**
 2. **Dynamic portfolio construction using three optimisation techniques**
@@ -51,18 +48,18 @@ The system is designed for **intraday and short-horizon trading**, where both re
 
 ### 📌 How It Works
 
-The QuantPulse pipeline follows a structured workflow:
+This pipeline follows a structured workflow:
 
-#### 1️⃣ Data Collection & Preprocessing
+#### 1️. Data Collection & Preprocessing
 
 * Hourly stock and index data collected using **Yahoo Finance API**
 * Cleaning, alignment, and synchronization across assets
 * Construction of lag-based and seasonal features
 
-#### 2️⃣ Rolling Short-Term Price Prediction
+#### 2️. Rolling Short-Term Price Prediction
 
 * **XGBoost regression model**
-* Rolling training window (recent ~2000 observations)
+* Rolling training window (recent ~1900 observations)
 * One-hour-ahead price forecasts
 * Predicted prices converted into expected short-term returns
 
@@ -70,26 +67,22 @@ The QuantPulse pipeline follows a structured workflow:
 
 
 
-#### 3️⃣ Dynamic Risk and Return Estimation
+#### 3️. Dynamic Risk and Return Estimation
 
 * Risk and covariance computed using:
-
   * recent lookback windows, or
   * decay-weighted observations
-* Ensures rapid adaptation to regime changes
+* This ensures rapid adaptation to regime changes
 
-#### 4️⃣ Portfolio Optimisation (Included Methods Only)
+#### 4️. Portfolio Optimisation (Included Methods Only)
 
-Despite experimenting with multiple ideas, **only the following three optimisation methods are implemented and reported**:
+Despite experimenting with many ideas, **only the following three optimisation methods are implemented and reported**:
 
-* **Efficient Frontier (Mean–Variance Optimisation)**
-  Maximises risk-adjusted return using predicted returns and dynamic covariance
+* **Efficient Frontier (Mean–Variance Optimisation)** - Maximises risk-adjusted return using predicted returns and dynamic covariance
 
-* **Bayesian Portfolio Optimisation**
-  Shrinks noisy short-term predictions using Bayesian updating for stability
+* **Bayesian Portfolio Optimisation** - Shrinks noisy short-term predictions using Bayesian updating for stability
 
-* **Hierarchical Equal Risk Contribution (HERC)**
-  Allocates risk hierarchically using correlation clustering, without relying on expected returns
+* **Hierarchical Equal Risk Contribution (HERC)** -  Allocates risk hierarchically using correlation clustering, without relying on expected returns
 
 ### 📌 Portfolio Optimisation Methods Included
 <div style="display: flex; justify-content: space-between; gap: 10px;">
@@ -107,7 +100,7 @@ Despite experimenting with multiple ideas, **only the following three optimisati
 > ⚠️ **Note:**
 ### 📌 Scope Clarification: Included vs. Explored Methods
 
-Although multiple portfolio optimisation ideas were explored during the development phase, **only three machine-learning–based portfolio optimisation methods are included in the final implementation, report, and presentation**:
+Although I explored multiple portfolio optimisation ideas, **only three machine-learning–based portfolio optimisation methods are included in the final implementation, report, and presentation**:
 
 * **Efficient Frontier (Mean–Variance Optimisation)**
 * **Bayesian Portfolio Optimisation**
