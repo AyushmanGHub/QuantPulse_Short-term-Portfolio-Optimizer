@@ -142,10 +142,12 @@ This ensures that the reported results remain **consistent, interpretable, and a
 
 
 ### 📌 Limitations
+`I assumed certain assumption while doing this project, this may not hold in real world case`
+* stocks can be bought in fractions
 * No transaction costs or slippage included
 * Assumes instant trade execution
 * No liquidity or market-impact modelling
-* Designed for research and educational purposes
+
 
 
 ### 📌 Future Work
