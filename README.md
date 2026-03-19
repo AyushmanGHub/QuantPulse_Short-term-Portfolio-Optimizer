@@ -1,6 +1,6 @@
 # QuantPulse: Short term Portfolio Optimizer
 
-### 📌 Abstract
+### Abstract
 
 In this project I developed an end-to-end framework for **short-term portfolio optimisation** that combines **machine-learning–based price prediction** for all assets with **dynamic, rolling portfolio construction**.
 Traditional portfolio optimisation methods rely on long-term historical averages for return and risk estimation, which fail to adapt to rapidly changing market conditions. Through this project, I aim addresses this limitation by **forecasting short-term future prices** and **recomputing risk–return statistics dynamically**, enabling more realistic and responsive portfolio decisions.
@@ -14,7 +14,7 @@ Although, I explored several optimisation ideas during development, **this repos
 These methods were selected to represent **return-focused**, **balanced**, and **risk-focused** strategies within a unified short-term framework.
 
 
-### 📌 Problem Statement and Motivation
+### Problem Statement and Motivation
 
 **The Challenge:**
 
@@ -37,7 +37,7 @@ QuantPulse introduces a **prediction-driven, rolling optimisation framework** th
 * Continuously **updates portfolio weights** to reflect real-time market behaviour
 
 
-### 📌 Introduction
+### Introduction
 
 The whole project is implemented in a **two-stage short-term portfolio optimisation pipeline** for Indian stocks and indices using **hourly market data**:
 
@@ -46,7 +46,7 @@ The whole project is implemented in a **two-stage short-term portfolio optimisat
 
 The system is designed for **intraday and short-horizon trading**, where both return and risk evolve quickly and static assumptions break down.
 
-### 📌 How It Works
+### How It Works
 
 This pipeline follows a structured workflow:
 
@@ -97,9 +97,9 @@ Despite experimenting with many ideas, **only the following three optimisation m
 | Bayesian Method    | Balanced        | Stabilises noisy short-term predictions  |
 | HERC               | Risk-oriented   | Robust diversification under uncertainty |
 
-> ⚠️ **Note:**
-### 📌 Scope Clarification: Included vs. Explored Methods
 
+###  Scope Clarification: Included vs. Explored Methods
+> ⚠️ **Note:**
 Although I explored multiple portfolio optimisation ideas, **only three machine-learning–based portfolio optimisation methods are included in the final implementation, report, and presentation**:
 
 * **Efficient Frontier (Mean–Variance Optimisation)**
@@ -120,20 +120,11 @@ These methods were excluded to **maintain clarity, reproducibility, and a focuse
 * return-driven,
 * uncertainty-aware, and
 * risk-balanced.
-  
+
 This ensures that the reported results remain **consistent, interpretable, and aligned with the project’s short-term optimisation objective**.
 
 
-### 📌 Tools and Technologies Used
-* **Programming Language:** Python
-* **Data Handling:** Pandas, NumPy
-* **Prediction Model:** XGBoost
-* **Optimisation:** SciPy, custom solvers
-* **Risk Modelling:** Rolling & decay-weighted covariance
-* **Visualisation:** Matplotlib
-* **Notebooks:** Jupyter Notebook
-
-### 📌 Results Summary
+### Results Summary
 * **Efficient Frontier** achieves the highest returns when predictions are strong
 * **Bayesian optimisation** provides smoother performance with lower volatility
 * **HERC** delivers the lowest risk and most stable portfolios during uncertain periods
@@ -141,7 +132,7 @@ This ensures that the reported results remain **consistent, interpretable, and a
 * Dynamic risk estimation significantly improves stability compared to static models
 
 
-### 📌 Limitations
+### Limitations
 `I assumed certain assumption while doing this project, this may not hold in real world case`
 * stocks can be bought in fractions
 * No transaction costs or slippage included
@@ -150,15 +141,9 @@ This ensures that the reported results remain **consistent, interpretable, and a
 
 
 
-### 📌 Future Work
+### Future Work
 * Incorporating transaction costs and execution delays
 * Exploring nonlinear prediction models (LSTM, Transformers)
 * Regime detection for adaptive risk targeting
 * Live paper-trading and deployment
 * Liquidity-aware portfolio construction
-
-## 🤝 Let’s Connect!
-
-😊 I’m always open to meaningful conversations, collaborative projects, and idea exchanges in the fields of **graph theory**, **machine learning**, and **data science**.
-If you’re interested in discussing new insights, working together on related topics, or contributing to ongoing discussions — feel free to reach out!
-**Let’s learn and build together 🚀**
